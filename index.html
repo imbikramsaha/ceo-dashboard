@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEO Dashboard - A Complete 360° View of Your Business </title>
-    <meta name="description" content="Track revenue, expenses, customers, and performance in real time—built for CEOs and leadership teams.">
-    
+    <meta name="description"
+        content="Track revenue, expenses, customers, and performance in real time—built for CEOs and leadership teams.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --primary-blue: #0F4C81;
@@ -27,13 +31,13 @@
             --neutral-800: #1E293B;
             --neutral-900: #0F172A;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--neutral-800);
@@ -41,7 +45,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* Navigation */
         nav {
             position: fixed;
@@ -53,12 +57,19 @@
             z-index: 1000;
             animation: slideDown 0.6s ease;
         }
-        
+
         @keyframes slideDown {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
-        
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -67,7 +78,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'DM Sans', sans-serif;
             font-size: 1.5rem;
@@ -77,7 +88,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .logo-icon {
             width: 32px;
             height: 32px;
@@ -89,13 +100,13 @@
             color: white;
             font-weight: 700;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             align-items: center;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--neutral-600);
@@ -103,16 +114,16 @@
             transition: color 0.3s ease;
             font-size: 0.95rem;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent-blue);
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 1rem;
         }
-        
+
         /* Buttons */
         .btn {
             padding: 0.75rem 1.75rem;
@@ -126,29 +137,29 @@
             display: inline-block;
             font-family: 'DM Sans', sans-serif;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
             color: white;
             box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
         }
-        
+
         .btn-secondary {
-            background: white;
-            color: var(--primary-blue);
-            border: 2px solid var(--neutral-200);
+            background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
+            color: white;
+            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
         }
-        
+
         .btn-secondary:hover {
-            border-color: var(--accent-blue);
-            color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
         }
-        
+
         /* Hero Section */
         .hero {
             padding: 10rem 2rem 6rem;
@@ -156,7 +167,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -168,12 +179,21 @@
             border-radius: 50%;
             animation: pulse 8s ease-in-out infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.3; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
         }
-        
+
         .hero-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -184,16 +204,23 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .hero-content {
             animation: fadeInLeft 0.8s ease;
         }
-        
+
         @keyframes fadeInLeft {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
-        
+
         .hero h1 {
             font-family: 'DM Sans', sans-serif;
             font-size: 4rem;
@@ -203,36 +230,43 @@
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
         }
-        
+
         .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--accent-blue), var(--prYour Business. One Executive View.imary-blue));
+            background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .hero p {
             font-size: 1.25rem;
             color: var(--neutral-600);
             margin-bottom: 2.5rem;
             line-height: 1.7;
         }
-        
+
         .hero-cta {
             display: flex;
             gap: 1rem;
         }
-        
+
         .hero-visual {
             animation: fadeInRight 0.8s ease 0.2s both;
             position: relative;
         }
-        
+
         @keyframes fadeInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
-        
+
         .dashboard-preview {
             background: white;
             border-radius: 16px;
@@ -240,45 +274,53 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             border: 1px solid var(--neutral-200);
         }
-        
+
         .dashboard-header {
             display: flex;
             gap: 0.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
             background: var(--neutral-300);
         }
-        
-        .dot:nth-child(1) { background: #FF5F56; }
-        .dot:nth-child(2) { background: #FFBD2E; }
-        .dot:nth-child(3) { background: #27C93F; }
-        
+
+        .dot:nth-child(1) {
+            background: #FF5F56;
+        }
+
+        .dot:nth-child(2) {
+            background: #FFBD2E;
+        }
+
+        .dot:nth-child(3) {
+            background: #27C93F;
+        }
+
         .dashboard-content {
             background: var(--neutral-50);
             border-radius: 8px;
             padding: 1.5rem;
             min-height: 300px;
         }
-        
+
         .kpi-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-bottom: 1rem;
         }
-        
+
         .kpi-card {
             background: white;
             padding: 1rem;
             border-radius: 8px;
             border: 1px solid var(--neutral-200);
         }
-        
+
         .kpi-label {
             font-size: 0.75rem;
             color: var(--neutral-600);
@@ -286,22 +328,27 @@
             letter-spacing: 0.5px;
             margin-bottom: 0.5rem;
         }
-        
+
         .kpi-value {
             font-size: 1.75rem;
             font-weight: 700;
             color: var(--dark-navy);
             font-family: 'DM Sans', sans-serif;
         }
-        
+
         .kpi-change {
             font-size: 0.85rem;
             margin-top: 0.25rem;
         }
-        
-        .kpi-change.positive { color: var(--success-green); }
-        .kpi-change.negative { color: #EF4444; }
-        
+
+        .kpi-change.positive {
+            color: var(--success-green);
+        }
+
+        .kpi-change.negative {
+            color: #EF4444;
+        }
+
         .chart-placeholder {
             background: white;
             border-radius: 8px;
@@ -313,30 +360,32 @@
             gap: 0.5rem;
             justify-content: space-around;
         }
-        
+
         .bar {
             background: linear-gradient(180deg, var(--accent-blue), var(--primary-blue));
             border-radius: 4px 4px 0 0;
             flex: 1;
             animation: growBar 1s ease-out;
         }
-        
+
         @keyframes growBar {
-            from { height: 0; }
+            from {
+                height: 0;
+            }
         }
-        
+
         /* Dashboard Showcase Section */
         .dashboard-showcase {
             padding: 6rem 2rem;
             background: white;
         }
-        
+
         .section-header {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 4rem;
         }
-        
+
         .section-header h2 {
             font-family: 'DM Sans', sans-serif;
             font-size: 2.75rem;
@@ -345,17 +394,17 @@
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
-        
+
         .section-header p {
             font-size: 1.15rem;
             color: var(--neutral-600);
         }
-        
+
         .showcase-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         /* PPT-Style Slider */
         .slider-wrapper {
             background: white;
@@ -364,7 +413,7 @@
             overflow: hidden;
             border: 1px solid var(--neutral-200);
         }
-        
+
         .slider-header {
             background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy));
             padding: 1.5rem 2rem;
@@ -372,19 +421,19 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .slider-title {
             color: white;
             font-family: 'DM Sans', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
         }
-        
+
         .slider-controls {
             display: flex;
             gap: 0.5rem;
         }
-        
+
         .slider-control-btn {
             width: 40px;
             height: 40px;
@@ -398,11 +447,11 @@
             justify-content: center;
             transition: all 0.3s ease;
         }
-        
+
         .slider-control-btn:hover {
             background: rgba(255, 255, 255, 0.25);
         }
-        
+
         .slider-tabs {
             display: flex;
             background: var(--neutral-100);
@@ -410,7 +459,7 @@
             overflow-x: auto;
             padding: 0 2rem;
         }
-        
+
         .slider-tab {
             padding: 1rem 1.5rem;
             background: none;
@@ -423,15 +472,15 @@
             transition: color 0.3s ease;
             font-family: 'DM Sans', sans-serif;
         }
-        
+
         .slider-tab:hover {
             color: var(--accent-blue);
         }
-        
+
         .slider-tab.active {
             color: var(--accent-blue);
         }
-        
+
         .slider-tab.active::after {
             content: '';
             position: absolute;
@@ -442,45 +491,52 @@
             background: var(--accent-blue);
             border-radius: 3px 3px 0 0;
         }
-        
+
         .slider-content {
             position: relative;
             overflow: hidden;
             background: var(--neutral-50);
         }
-        
+
         .slide {
             display: none;
             padding: 3rem 2rem;
             animation: fadeIn 0.5s ease;
         }
-        
+
         .slide.active {
             display: block;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .slide-caption {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .slide-caption h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 1.75rem;
             color: var(--dark-navy);
             margin-bottom: 0.5rem;
         }
-        
+
         .slide-caption p {
             color: var(--neutral-600);
             font-size: 1.05rem;
         }
-        
+
         .slide-dashboard {
             background: white;
             border-radius: 12px;
@@ -488,14 +544,14 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             border: 1px solid var(--neutral-200);
         }
-        
+
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        
+
         .metric-card {
             background: linear-gradient(135deg, var(--neutral-50), white);
             padding: 1.5rem;
@@ -503,19 +559,19 @@
             border: 1px solid var(--neutral-200);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .metric-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         }
-        
+
         .metric-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
         }
-        
+
         .metric-icon {
             width: 48px;
             height: 48px;
@@ -525,12 +581,23 @@
             justify-content: center;
             font-size: 1.5rem;
         }
-        
-        .metric-icon.blue { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); }
-        .metric-icon.green { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); }
-        .metric-icon.orange { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); }
-        .metric-icon.purple { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); }
-        
+
+        .metric-icon.blue {
+            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+        }
+
+        .metric-icon.green {
+            background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+        }
+
+        .metric-icon.orange {
+            background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+        }
+
+        .metric-icon.purple {
+            background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+        }
+
         .metric-title {
             font-size: 0.85rem;
             color: var(--neutral-600);
@@ -538,7 +605,7 @@
             letter-spacing: 0.5px;
             margin-bottom: 0.5rem;
         }
-        
+
         .metric-value {
             font-size: 2rem;
             font-weight: 700;
@@ -546,31 +613,36 @@
             font-family: 'DM Sans', sans-serif;
             margin-bottom: 0.5rem;
         }
-        
+
         .metric-trend {
             font-size: 0.9rem;
             display: flex;
             align-items: center;
             gap: 0.25rem;
         }
-        
-        .trend-positive { color: var(--success-green); }
-        .trend-negative { color: #EF4444; }
-        
+
+        .trend-positive {
+            color: var(--success-green);
+        }
+
+        .trend-negative {
+            color: #EF4444;
+        }
+
         .chart-container {
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
             border: 1px solid var(--neutral-200);
         }
-        
+
         .chart-title {
             font-weight: 600;
             color: var(--dark-navy);
             margin-bottom: 1rem;
             font-family: 'DM Sans', sans-serif;
         }
-        
+
         .mini-chart {
             height: 200px;
             display: flex;
@@ -578,7 +650,7 @@
             gap: 0.75rem;
             padding: 1rem 0;
         }
-        
+
         .mini-bar {
             flex: 1;
             background: linear-gradient(180deg, var(--accent-blue), var(--primary-blue));
@@ -586,38 +658,38 @@
             position: relative;
             animation: growBar 0.8s ease-out;
         }
-        
+
         .insight-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
-        
+
         .insight-card {
             background: linear-gradient(135deg, #FFF9E6, white);
             padding: 1.25rem;
             border-radius: 10px;
             border-left: 4px solid var(--warning-orange);
         }
-        
+
         .insight-title {
             font-weight: 600;
             color: var(--dark-navy);
             margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
-        
+
         .insight-text {
             font-size: 0.9rem;
             color: var(--neutral-600);
         }
-        
+
         /* Benefits Section */
         .benefits {
             padding: 6rem 2rem;
             background: var(--neutral-50);
         }
-        
+
         .benefits-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -625,7 +697,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .benefit-card {
             background: white;
             padding: 2rem;
@@ -634,17 +706,24 @@
             transition: all 0.3s ease;
             animation: fadeInUp 0.6s ease;
         }
-        
+
         .benefit-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
         }
-        
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .benefit-icon {
             width: 64px;
             height: 64px;
@@ -655,32 +734,49 @@
             font-size: 2rem;
             margin-bottom: 1.5rem;
         }
-        
-        .benefit-card:nth-child(1) .benefit-icon { background: linear-gradient(135deg, #E3F2FD, #90CAF9); }
-        .benefit-card:nth-child(2) .benefit-icon { background: linear-gradient(135deg, #E8F5E9, #81C784); }
-        .benefit-card:nth-child(3) .benefit-icon { background: linear-gradient(135deg, #FFF3E0, #FFB74D); }
-        .benefit-card:nth-child(4) .benefit-icon { background: linear-gradient(135deg, #F3E5F5, #BA68C8); }
-        .benefit-card:nth-child(5) .benefit-icon { background: linear-gradient(135deg, #E0F2F1, #4DB6AC); }
-        .benefit-card:nth-child(6) .benefit-icon { background: linear-gradient(135deg, #FCE4EC, #F06292); }
-        
+
+        .benefit-card:nth-child(1) .benefit-icon {
+            background: linear-gradient(135deg, #E3F2FD, #90CAF9);
+        }
+
+        .benefit-card:nth-child(2) .benefit-icon {
+            background: linear-gradient(135deg, #E8F5E9, #81C784);
+        }
+
+        .benefit-card:nth-child(3) .benefit-icon {
+            background: linear-gradient(135deg, #FFF3E0, #FFB74D);
+        }
+
+        .benefit-card:nth-child(4) .benefit-icon {
+            background: linear-gradient(135deg, #F3E5F5, #BA68C8);
+        }
+
+        .benefit-card:nth-child(5) .benefit-icon {
+            background: linear-gradient(135deg, #E0F2F1, #4DB6AC);
+        }
+
+        .benefit-card:nth-child(6) .benefit-icon {
+            background: linear-gradient(135deg, #FCE4EC, #F06292);
+        }
+
         .benefit-card h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 1.35rem;
             color: var(--dark-navy);
             margin-bottom: 0.75rem;
         }
-        
+
         .benefit-card p {
             color: var(--neutral-600);
             line-height: 1.7;
         }
-        
+
         /* Features Section */
         .features {
             padding: 6rem 2rem;
             background: white;
         }
-        
+
         .features-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -688,11 +784,11 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
         }
-        
+
         .feature-item {
             text-align: center;
         }
-        
+
         .feature-icon {
             width: 72px;
             height: 72px;
@@ -705,30 +801,30 @@
             font-size: 2rem;
             border: 2px solid var(--neutral-200);
         }
-        
+
         .feature-item h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 1.2rem;
             color: var(--dark-navy);
             margin-bottom: 0.75rem;
         }
-        
+
         .feature-item p {
             color: var(--neutral-600);
         }
-        
+
         /* How It Works */
         .how-it-works {
             padding: 6rem 2rem;
             background: linear-gradient(135deg, var(--dark-navy), var(--primary-blue));
             color: white;
         }
-        
+
         .how-it-works .section-header h2,
         .how-it-works .section-header p {
             color: white;
         }
-        
+
         .steps-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -737,7 +833,7 @@
             gap: 2rem;
             position: relative;
         }
-        
+
         .steps-container::before {
             content: '';
             position: absolute;
@@ -745,17 +841,17 @@
             left: 15%;
             right: 15%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             z-index: 0;
         }
-        
+
         .step {
             flex: 1;
             text-align: center;
             position: relative;
             z-index: 1;
         }
-        
+
         .step-number {
             width: 100px;
             height: 100px;
@@ -771,23 +867,23 @@
             border: 3px solid rgba(255, 255, 255, 0.3);
             font-family: 'DM Sans', sans-serif;
         }
-        
+
         .step h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
         }
-        
+
         .step p {
             color: rgba(255, 255, 255, 0.9);
         }
-        
+
         /* Who Section */
         .who-section {
             padding: 6rem 2rem;
             background: var(--neutral-50);
         }
-        
+
         .who-grid {
             max-width: 900px;
             margin: 0 auto;
@@ -795,7 +891,7 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
-        
+
         .who-card {
             background: white;
             padding: 2rem;
@@ -804,24 +900,24 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-        
+
         .who-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
             border-color: var(--accent-blue);
         }
-        
+
         .who-card .icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .who-card h3 {
             font-family: 'DM Sans', sans-serif;
             color: var(--dark-navy);
             font-size: 1.1rem;
         }
-        
+
         /* Final CTA */
         .final-cta {
             padding: 6rem 2rem;
@@ -829,46 +925,46 @@
             color: white;
             text-align: center;
         }
-        
+
         .final-cta h2 {
             font-family: 'DM Sans', sans-serif;
             font-size: 3rem;
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
-        
+
         .final-cta p {
             font-size: 1.25rem;
             margin-bottom: 2.5rem;
             opacity: 0.95;
         }
-        
+
         .final-cta .btn-primary {
             background: white;
             color: var(--primary-blue);
         }
-        
+
         .final-cta .btn-primary:hover {
             background: var(--neutral-100);
         }
-        
+
         .final-cta .btn-secondary {
             border-color: rgba(255, 255, 255, 0.5);
             color: white;
         }
-        
+
         .final-cta .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: white;
         }
-        
+
         /* Footer */
         footer {
             background: var(--dark-navy);
             color: white;
             padding: 3rem 2rem 1.5rem;
         }
-        
+
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -877,41 +973,41 @@
             gap: 3rem;
             margin-bottom: 2rem;
         }
-        
+
         .footer-brand h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.7;
         }
-        
+
         .footer-links h4 {
             font-family: 'DM Sans', sans-serif;
             margin-bottom: 1rem;
         }
-        
+
         .footer-links ul {
             list-style: none;
         }
-        
+
         .footer-links ul li {
             margin-bottom: 0.75rem;
         }
-        
+
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .footer-links a:hover {
             color: white;
         }
-        
+
         .footer-bottom {
             max-width: 1400px;
             margin: 0 auto;
@@ -920,78 +1016,79 @@
             text-align: center;
             color: rgba(255, 255, 255, 0.6);
         }
-        
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            
+
             .hero h1 {
                 font-size: 3rem;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .steps-container {
                 flex-direction: column;
             }
-            
+
             .steps-container::before {
                 display: none;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         @media (max-width: 768px) {
             .hero {
                 padding: 8rem 1.5rem 4rem;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero p {
                 font-size: 1.1rem;
             }
-            
+
             .hero-cta {
                 flex-direction: column;
             }
-            
+
             .section-header h2 {
                 font-size: 2rem;
             }
-            
+
             .slider-tabs {
                 padding: 0 1rem;
             }
-            
+
             .slide {
                 padding: 2rem 1rem;
             }
-            
+
             .metrics-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .final-cta h2 {
                 font-size: 2rem;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -1070,9 +1167,10 @@
     <section id="showcase" class="dashboard-showcase">
         <div class="section-header">
             <h2>Every Metric That Matters. In One Place.</h2>
-            <p>Navigate through different dashboard views to see how you can monitor your entire business performance.</p>
+            <p>Navigate through different dashboard views to see how you can monitor your entire business performance.
+            </p>
         </div>
-        
+
         <div class="showcase-container">
             <div class="slider-wrapper">
                 <div class="slider-header">
@@ -1082,7 +1180,7 @@
                         <button class="slider-control-btn" onclick="nextSlide()">▶</button>
                     </div>
                 </div>
-                
+
                 <div class="slider-tabs">
                     <button class="slider-tab active" onclick="showSlide(0)">CEO Overview</button>
                     <button class="slider-tab" onclick="showSlide(1)">Revenue & Sales</button>
@@ -1090,13 +1188,14 @@
                     <button class="slider-tab" onclick="showSlide(3)">Customer Insights</button>
                     <button class="slider-tab" onclick="showSlide(4)">Executive Insights</button>
                 </div>
-                
+
                 <div class="slider-content">
                     <!-- Slide 1: CEO Overview -->
                     <div class="slide active">
                         <div class="slide-caption">
                             <h3>CEO Overview Dashboard</h3>
-                            <p>Get instant visibility into your company's key performance indicators and health metrics.</p>
+                            <p>Get instant visibility into your company's key performance indicators and health metrics.
+                            </p>
                         </div>
                         <div class="slide-dashboard">
                             <div class="metrics-grid">
@@ -1148,7 +1247,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Slide 2: Revenue & Sales -->
                     <div class="slide">
                         <div class="slide-caption">
@@ -1197,12 +1296,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Slide 3: Expense Analysis -->
                     <div class="slide">
                         <div class="slide-caption">
                             <h3>Expense Analysis</h3>
-                            <p>Track spending patterns and identify cost optimization opportunities across all departments.</p>
+                            <p>Track spending patterns and identify cost optimization opportunities across all
+                                departments.</p>
                         </div>
                         <div class="slide-dashboard">
                             <div class="metrics-grid">
@@ -1246,12 +1346,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Slide 4: Customer Insights -->
                     <div class="slide">
                         <div class="slide-caption">
                             <h3>Customer Insights</h3>
-                            <p>Understand customer growth, retention, and lifetime value to drive strategic decisions.</p>
+                            <p>Understand customer growth, retention, and lifetime value to drive strategic decisions.
+                            </p>
                         </div>
                         <div class="slide-dashboard">
                             <div class="metrics-grid">
@@ -1295,38 +1396,45 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Slide 5: Executive Insights -->
                     <div class="slide">
                         <div class="slide-caption">
                             <h3>Executive Insights & Alerts</h3>
-                            <p>AI-powered insights highlight risks, opportunities, and performance alerts for leadership action.</p>
+                            <p>AI-powered insights highlight risks, opportunities, and performance alerts for leadership
+                                action.</p>
                         </div>
                         <div class="slide-dashboard">
                             <div class="insight-cards">
                                 <div class="insight-card">
                                     <div class="insight-title">🎯 Opportunity Alert</div>
-                                    <div class="insight-text">Q4 pipeline shows 32% increase. Consider expanding sales team to capture growth.</div>
+                                    <div class="insight-text">Q4 pipeline shows 32% increase. Consider expanding sales
+                                        team to capture growth.</div>
                                 </div>
                                 <div class="insight-card">
                                     <div class="insight-title">⚠️ Risk Detection</div>
-                                    <div class="insight-text">Customer churn increased 2.4% in Enterprise segment. Immediate retention strategy needed.</div>
+                                    <div class="insight-text">Customer churn increased 2.4% in Enterprise segment.
+                                        Immediate retention strategy needed.</div>
                                 </div>
                                 <div class="insight-card">
                                     <div class="insight-title">💡 Cost Optimization</div>
-                                    <div class="insight-text">Cloud infrastructure costs down 18% after optimization. Projected $84K annual savings.</div>
+                                    <div class="insight-text">Cloud infrastructure costs down 18% after optimization.
+                                        Projected $84K annual savings.</div>
                                 </div>
                                 <div class="insight-card">
                                     <div class="insight-title">📈 Performance Highlight</div>
-                                    <div class="insight-text">Product team velocity up 27%. New features driving 15% increase in user engagement.</div>
+                                    <div class="insight-text">Product team velocity up 27%. New features driving 15%
+                                        increase in user engagement.</div>
                                 </div>
                                 <div class="insight-card">
                                     <div class="insight-title">🔔 Strategic Signal</div>
-                                    <div class="insight-text">Market expansion opportunity: 3 competitors exited Southeast region. Strong entry timing.</div>
+                                    <div class="insight-text">Market expansion opportunity: 3 competitors exited
+                                        Southeast region. Strong entry timing.</div>
                                 </div>
                                 <div class="insight-card">
                                     <div class="insight-title">⚡ Action Required</div>
-                                    <div class="insight-text">Cash runway: 18 months. Recommend initiating Series B planning within next quarter.</div>
+                                    <div class="insight-text">Cash runway: 18 months. Recommend initiating Series B
+                                        planning within next quarter.</div>
                                 </div>
                             </div>
                         </div>
@@ -1346,12 +1454,14 @@
             <div class="benefit-card">
                 <div class="benefit-icon">⚡</div>
                 <h3>Real-Time Visibility</h3>
-                <p>See your entire business health at a glance. No delays, no guesswork—instant access to what matters most.</p>
+                <p>See your entire business health at a glance. No delays, no guesswork—instant access to what matters
+                    most.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">🎯</div>
                 <h3>Strategic Clarity</h3>
-                <p>Focus on high-impact metrics and KPIs. Filter out noise and concentrate on driving business outcomes.</p>
+                <p>Focus on high-impact metrics and KPIs. Filter out noise and concentrate on driving business outcomes.
+                </p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">🚀</div>
@@ -1366,12 +1476,14 @@
             <div class="benefit-card">
                 <div class="benefit-icon">📊</div>
                 <h3>Unified Metrics</h3>
-                <p>Finance, sales, and operations all in one place. No more switching between multiple tools and platforms.</p>
+                <p>Finance, sales, and operations all in one place. No more switching between multiple tools and
+                    platforms.</p>
             </div>
             <div class="benefit-card">
                 <div class="benefit-icon">🤝</div>
                 <h3>Leadership Alignment</h3>
-                <p>Ensure every executive is working from the same numbers, driving collaboration and shared accountability.</p>
+                <p>Ensure every executive is working from the same numbers, driving collaboration and shared
+                    accountability.</p>
             </div>
         </div>
     </section>
@@ -1482,7 +1594,8 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>Executive Dashboard</h3>
-                <p>The executive analytics platform built for modern CEOs and leadership teams who demand clarity, speed, and strategic insight.</p>
+                <p>The executive analytics platform built for modern CEOs and leadership teams who demand clarity,
+                    speed, and strategic insight.</p>
             </div>
             <div class="footer-links">
                 <h4>Product</h4>
@@ -1521,14 +1634,14 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const tabs = document.querySelectorAll('.slider-tab');
-        
+
         function showSlide(index) {
             // Ensure index is within bounds
             if (index >= slides.length) index = 0;
             if (index < 0) index = slides.length - 1;
-            
+
             currentSlide = index;
-            
+
             // Update slides
             slides.forEach((slide, i) => {
                 slide.classList.remove('active');
@@ -1536,7 +1649,7 @@
                     slide.classList.add('active');
                 }
             });
-            
+
             // Update tabs
             tabs.forEach((tab, i) => {
                 tab.classList.remove('active');
@@ -1545,31 +1658,31 @@
                 }
             });
         }
-        
+
         function nextSlide() {
             showSlide(currentSlide + 1);
         }
-        
+
         function previousSlide() {
             showSlide(currentSlide - 1);
         }
-        
+
         // Auto-advance slides every 8 seconds
         let autoSlideInterval = setInterval(nextSlide, 8000);
-        
+
         // Reset auto-advance when user manually changes slides
         function resetAutoSlide() {
             clearInterval(autoSlideInterval);
             autoSlideInterval = setInterval(nextSlide, 8000);
         }
-        
+
         // Add click listeners to tabs
         tabs.forEach((tab, index) => {
             tab.addEventListener('click', () => {
                 resetAutoSlide();
             });
         });
-        
+
         // Add keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
@@ -1580,7 +1693,7 @@
                 resetAutoSlide();
             }
         });
-        
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1594,13 +1707,13 @@
                 }
             });
         });
-        
+
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1609,7 +1722,7 @@
                 }
             });
         }, observerOptions);
-        
+
         // Observe benefit cards
         document.querySelectorAll('.benefit-card').forEach((card, index) => {
             card.style.opacity = '0';
@@ -1619,4 +1732,5 @@
         });
     </script>
 </body>
+
 </html>
